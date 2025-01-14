@@ -1,6 +1,7 @@
 package problem.easy;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Problem9 {
 
@@ -12,6 +13,8 @@ public class Problem9 {
      */
     public static List<String> transformStrings(List<String> strings) {
         // 여기에 코드 작성
-        return null;
+        return strings.stream()
+                .map(n -> n.length() >= 3 ? n.toUpperCase() : n)
+                .collect(Collectors.toList());
     }
 }
